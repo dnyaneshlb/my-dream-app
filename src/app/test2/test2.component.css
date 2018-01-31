@@ -1,0 +1,9 @@
+
+.italic {
+  font-style: italic;
+  color: rgb(36, 27, 112)
+}
+
+.underline {
+  text-decoration:none;
+}

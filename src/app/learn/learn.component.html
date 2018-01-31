@@ -1,0 +1,46 @@
+<p>
+  learn works after change! {{message}}
+</p>
+<!-- This is dual way data binding. This required you to have FormsModule included as part of app.module.ts
+     Otherwise it will not work.
+  -->
+<input type="text" [(ngModel)]="message"/>
+<input type="text" value="{{message}}"/>
+<input type="text" [value]="message"/>
+<input type="button" (click)="greetMe('Good Morning')" value="Greet"/>
+<hr>
+
+Passing data from parent component to child component<h4>{{person.name}},{{person.company}}</h4>
+<hr>
+
+Passing data from child component to parent component<h5></h5>
+<input type="button" value="Click me To send data to parent component" (click)="yell($event)"/>
+<hr><hr>
+<div>
+  <a routerLink="/test1/Dnyanesh" routerLinkActive="active">
+    <h4>
+      Test1 Route
+    </h4>
+  </a>
+  <a routerLink="/test2" routerLinkActive="active">
+    <h4>
+      Test2 Route
+    </h4>
+  </a>
+  <a routerLink="/test3" routerLinkActive="active">
+    <h4>
+      Test3 Route
+    </h4>
+  </a>
+  <a routerLink="/invalid" routerLinkActive="active">
+    <h4>
+      Invalid Route
+    </h4>
+  </a>
+  <a routerLink="/" routerLinkActive="active">
+    <h4>
+      home
+    </h4>
+  </a>
+</div>
+<hr><hr>

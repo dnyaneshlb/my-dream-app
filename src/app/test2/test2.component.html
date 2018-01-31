@@ -1,0 +1,19 @@
+<form>
+  <label [ngClass]="{'italic':true, 'underline': true}">Search SuperHeroes :</label>
+  <input type="text" [(ngModel)]="term" name="term"/>
+</form>
+
+<ul>
+  <li *ngFor="let ninja of ninjas | myfilter:term">
+      <span [ngStyle]="{background:ninja.belt, color:ninja.belt}" style="margin:20px; border-radius:4px">{{ninja.belt}} belt</span>
+      <h5 style="display:inline">{{ninja.name | uppercase}}</h5>
+
+      <!--  Chaining pipes -->
+      <h5 style="display:inline">{{ninja.name | uppercase | slice :-3}}</h5>
+      <hr>
+  </li>
+</ul>
+
+<p *ngIf="ninjas.length == 0">
+   ngif example : This should not be shown
+</p>

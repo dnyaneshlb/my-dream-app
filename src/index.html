@@ -3,11 +3,29 @@
 <head>
   <meta charset="utf-8">
   <title>MyDreamApp</title>
+
+  <!-- This means : When base URL is hit, please server index.html -->
   <base href="/">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
+<script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCYMkZlg1n-1ZpPU33c_Uh36Kpf7SUVm_I",
+    authDomain: "hello-world-dfa52.firebaseapp.com",
+    databaseURL: "https://hello-world-dfa52.firebaseio.com",
+    projectId: "hello-world-dfa52",
+    storageBucket: "hello-world-dfa52.appspot.com",
+    messagingSenderId: "340915001841"
+  };
+  firebase.initializeApp(config);
+</script>
+
+
 <body>
   <app-root>Loading...</app-root>
 </body>
